@@ -80,7 +80,7 @@
 </div>
 <!-- End Fanpage -->
 <!-- The Fanpage -->
-<div class="box-right">
+<?php  /* <div class="box-right">
     <div class="title tittle-box-right">
         <h2> Thống kê truy cập </h2>
     </div>
@@ -107,6 +107,7 @@
             <!-- Histats.com  END  -->
         </center>
     </div>
+    */ ?>
 </div>
 <!-- End Fanpage -->
 

@@ -11,7 +11,7 @@
 		   <img src="<?php echo public_url() ?>site/images/top.png">
 	  	</a>
 
-	  	<div class="wrapper">
+	  	<div class="wraper">
 	  		<div class="header">
 	  			<?php $this->load->view('site/header'); ?>
 	  		</div>
@@ -20,7 +20,7 @@
 	  				<?php $this->load->view('site/left'); ?>
 	  			</div>
 	  			<div class="content">
-	  				<?php //$this->load->view('site/left'); ?>
+	  				<?php $this->load->view($temp); ?>
 	  			</div>
 	  			<div class="right">
 	  				<?php $this->load->view('site/right'); ?>
