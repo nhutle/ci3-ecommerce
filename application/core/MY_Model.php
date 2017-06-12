@@ -2,6 +2,9 @@
 
 class MY_Model extends CI_Model {
     var $table = '';
+    var $key = 'id';
+    var $order = '';
+    var $select = '';
 
     public function create($data) {
         if ($this->db->insert($this->table, $data)) {
@@ -108,6 +111,10 @@ class MY_Model extends CI_Model {
 
         if (isset($input['limit'][0]) && isset($input['limit'][1])) {
             $this->db->limit($input['limit'][0], $input['limit'][1]);
+        }
+
+        if (isset($input['like']) && $input['like']) {
+        	$this->db->like($input['like'][0], $input['like'][1]);
         }
     }
 
