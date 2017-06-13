@@ -9,7 +9,7 @@ if (!function_exists('public_url')) {
     }
 }
 
-// print items in array format:
+// Print items in array format:
 if (!function_exists('pre')) {
     function pre($list, $exit = true) {
         echo '<pre>';
