@@ -5,6 +5,7 @@
 <div class="line"></div>
 
 <div class="wrapper">
+	<?php $this->load->view('admin/admin/message', $this->data); ?>
     <div class="widget">
         <div class="title">
             <span class="titleIcon"><div class="checker" id="uniform-titleCheck"><span><input type="checkbox" id="titleCheck" name="titleCheck" style="opacity: 0;"></span></div>

@@ -15,6 +15,8 @@ Class Admin extends MY_Controller {
         $total               = $this->Admin_model->get_total();
         $this->data['total'] = $total;
 
+        $message = $this->session->flashdata('message');
+        $this->data['message'] = $message;
         $this->data['temp'] = 'admin/admin/index';
         $this->load->view('admin/main', $this->data);
     }
@@ -41,10 +43,14 @@ Class Admin extends MY_Controller {
                 );
 
                 if ($this->Admin_model->create($data)) {
-                    echo 'success';
+                	$this->session->set_flashdata('message', 'success');
+                    // echo 'success';
                 } else {
-                    echo 'failure';
+                	$this->session->set_flashdata('message', 'failure');
+                    // echo 'failure';
                 }
+
+                redirect(admin_url('admin'));
             }
         }
 

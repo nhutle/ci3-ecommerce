@@ -14,13 +14,13 @@
     <!-- Left navigation -->
     <ul id="menu" class="nav">
         <li class="home">
-            <a href="admin/home.html" class="active" id="current">
+            <a href="<?php echo admin_url(); ?>" class="active" id="current">
                 <span>Bảng điều khiển</span>
                 <strong></strong>
             </a>
         </li>
         <li class="tran">
-            <a href="admin/tran.html" class=" exp">
+            <a href="<?php echo admin_url('admin'); ?>" class=" exp">
                 <span>Quản lý bán hàng</span>
                 <strong>2</strong>
             </a>
@@ -57,10 +57,10 @@
             </a>
             <ul class="sub">
                 <li>
-                    <a href="admin/admin.html">Ban quản trị</a>
+                    <a href="<?php echo admin_url(); ?>">Ban quản trị</a>
                 </li>
                 <li>
-                    <a href="admin/admin_group.html">Nhóm quản trị</a>
+                    <a href="<?php echo admin_url('admin'); ?>">Nhóm quản trị</a>
                 </li>
                 <li>
                     <a href="admin/user.html">Thành viên</a>
