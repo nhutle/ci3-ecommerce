@@ -27,8 +27,9 @@
 		                    <div class="clear"></div>
 		                </div>
 		                <div class="loginControl">
+                            <div style="color: red; text-align: center; font-weight: bold;"><?php echo form_error('login'); ?></div>
 		                    <input type="hidden" name="submit" value="1">
-		                    <input type="submit" value="Đăng nhập" class="dredB logMeIn">
+		                    <input type="submit" value="Đăng nhập" class="dredB logMeIn" name="submit">
 		                    <div class="clear"></div>
 		                </div>
 		            </fieldset>

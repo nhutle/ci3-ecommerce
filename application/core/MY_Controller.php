@@ -24,6 +24,18 @@ Class MY_Controller extends CI_Controller {
     }
 
     private function _check_login() {
+        $page = $this->uri->segment(2);
 
+        $login = $this->session->userdata('login');
+
+        // print_r($page);die();
+
+        if  (!$login && $page != 'login') {
+            redirect(admin_url('login'));
+        }
+
+        if ($login && $page == 'login') {
+            redirect(admin_url('home'));
+        }
     }
 }

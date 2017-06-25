@@ -5,7 +5,7 @@
 <div class="line"></div>
 
 <div class="wrapper">
-	<?php $this->load->view('admin/admin/message', $this->data); ?>
+    <?php $this->load->view('admin/admin/message', $this->data); ?>
     <div class="widget">
         <div class="title">
             <span class="titleIcon"><div class="checker" id="uniform-titleCheck"><span><input type="checkbox" id="titleCheck" name="titleCheck" style="opacity: 0;"></span></div>
@@ -39,26 +39,26 @@
             </tfoot>
             <tbody>
                 <?php foreach ($list as $row) { ?>
-                	<tr>
-	                    <td>
-	                        <div class="checker" id="uniform-undefined"><span><input type="checkbox" name="id[]" value="<?php echo $row->id; ?>" style="opacity: 0;"></span></div>
-	                    </td>
-	                    <td class="textC"><?php echo $row->id; ?></td>
-	                    <td>
-	                    	<span class="tipS" original-title="<?php echo $row->name; ?>"><?php echo $row->name; ?></span>
-	                    </td>
-	                    <td>
-	                    	<span class="tipS" original-title="<?php echo $row->username; ?>"><?php echo $row->username; ?></span>
-	                    </td>
-	                    <td class="option">
-	                        <a href="user/edit/19.html" class="tipS " original-title="Chỉnh sửa">
-	                            <img src="<?php echo public_url('admin/images/icons/color/edit.png'); ?>">
-	                        </a>
-	                        <a href="user/del/19.html" class="tipS verify_action" original-title="Xóa">
-	                            <img src="<?php echo public_url('admin/images/icons/color/delete.png'); ?>">
-	                        </a>
-	                    </td>
-	                </tr>
+                    <tr>
+                        <td>
+                            <div class="checker" id="uniform-undefined"><span><input type="checkbox" name="id[]" value="<?php echo $row->id; ?>" style="opacity: 0;"></span></div>
+                        </td>
+                        <td class="textC"><?php echo $row->id; ?></td>
+                        <td>
+                            <span class="tipS" original-title="<?php echo $row->name; ?>"><?php echo $row->name; ?></span>
+                        </td>
+                        <td>
+                            <span class="tipS" original-title="<?php echo $row->username; ?>"><?php echo $row->username; ?></span>
+                        </td>
+                        <td class="option">
+                            <a href="<?php echo admin_url('admin/edit/' . $row->id); ?>" class="tipS " original-title="Chỉnh sửa">
+                                <img src="<?php echo public_url('admin/images/icons/color/edit.png'); ?>">
+                            </a>
+                            <a href="<?php echo admin_url('admin/delete/' . $row->id); ?>" class="tipS verify_action" original-title="Xóa">
+                                <img src="<?php echo public_url('admin/images/icons/color/delete.png'); ?>">
+                            </a>
+                        </td>
+                    </tr>
                 <?php } ?>
             </tbody>
         </table>

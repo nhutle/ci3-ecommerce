@@ -57,7 +57,7 @@
             </a>
             <ul class="sub">
                 <li>
-                    <a href="<?php echo admin_url(); ?>">Ban quản trị</a>
+                    <a href="<?php echo admin_url('admin'); ?>">Ban quản trị</a>
                 </li>
                 <li>
                     <a href="<?php echo admin_url('admin'); ?>">Nhóm quản trị</a>

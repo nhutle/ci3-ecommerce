@@ -15,7 +15,7 @@
                 </li>
                 <!-- Logout -->
                 <li>
-                    <a href="admin/home/logout.html">
+                    <a href="<?php echo admin_url('admin/logout'); ?>">
                         <img src="<?php echo public_url('admin'); ?>/images/icons/topnav/logout.png" alt="" />
                         <span>Đăng xuất</span>
                     </a>
